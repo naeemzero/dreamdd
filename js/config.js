@@ -6,7 +6,7 @@ const CONFIG = Object.freeze({
 
   // ── API ──────────────────────────────────────────────────────────────────────
   API_BASE_URL  : 'https://api.dreamdevelopment.org/v1',
-  USE_MOCK      : true,
+  USE_MOCK      : false,
   MOCK_DELAY_MS : 600,
 
   // ── Organisation ─────────────────────────────────────────────────────────────
@@ -26,17 +26,17 @@ const CONFIG = Object.freeze({
   CONTACT_ADDRESS  : 'Dhaka, Bangladesh',
 
   // ── Executive Terms ───────────────────────────────────────────────────────────
-  TERM_START   : '2026-04-23',
+  TERM_START   : '2026-01-01',
   TERM_YEARS   : 2,
   TERM_LABEL   : 'Term 2026–2028',
 
   // ── Member ID ────────────────────────────────────────────────────────────────
-  ID_PREFIX    : 'DD',         // generates DD-001, DD-002 …
-  ID_DIGITS    : 3,            // zero-padded to 3 digits
+  ID_PREFIX    : 'DD',         // generates DD-2405001, DD-2405002 …
+  ID_DIGITS    : 7,            // zero-padded to 7 digits
 
   // ── File Upload Limits ────────────────────────────────────────────────────────
-  MAX_PHOTO_MB     : 2,
-  MAX_DOC_MB       : 5,
+  MAX_PHOTO_MB     : 3,
+  MAX_DOC_MB       : 10,
   ALLOWED_IMG_EXT  : ['image/jpeg','image/png','image/webp'],
   ALLOWED_DOC_EXT  : ['image/jpeg','image/png','image/webp','application/pdf'],
 
