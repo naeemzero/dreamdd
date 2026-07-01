@@ -1,3 +1,15 @@
+// Add these imports to the top of js/api.js
+import { db } from './db.js';
+import { collection, getDocs } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js";
+
+// Update the function like this:
+const getMembers = async () => {
+    if (CONFIG.USE_MOCK) return delay([...MOCK.members]); 
+    
+    // Live Firestore call
+    const querySnapshot = await getDocs(collection(db, "members"));
+    return querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+};
 // =============================================================================
 // js/api.js  —  Dream Development DD · v2 API Layer
 // =============================================================================
